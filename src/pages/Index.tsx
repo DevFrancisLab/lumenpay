@@ -3,10 +3,12 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Brain, Shield, Coins, ArrowRightLeft, Twitter, Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-ai-crypto.jpg";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
@@ -20,7 +22,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background z-0" />
         
-        <div className="container mx-auto px-6 py-20 relative z-10">
+        <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
             <div className="inline-block mb-4">
               <span className="text-primary text-sm font-semibold tracking-wider uppercase border border-primary/30 rounded-full px-4 py-2">
@@ -51,13 +53,13 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-card/50 relative">
+      <section id="features" className="py-24 bg-card/50 relative scroll-mt-16">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Why Choose <span className="text-primary">LumenPay AI</span>
+              Why Choose <span className="text-primary">LumenPay</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Seamlessly bridge the gap between cryptocurrency and traditional finance
@@ -113,7 +115,7 @@ const Index = () => {
       </section>
 
       {/* Dashboard Preview Section */}
-      <section className="py-24 bg-background">
+      <section id="pricing" className="py-24 bg-background scroll-mt-16">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold">
@@ -200,7 +202,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                quote: "LumenPay AI made converting crypto into usable money effortless. The AI automation is genius!",
+                quote: "LumenPay made converting crypto into usable money effortless. The AI automation is genius!",
                 author: "Alex K.",
                 role: "Beta User"
               },
@@ -234,7 +236,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-background border-t border-border py-16">
+      <footer id="about" className="bg-background border-t border-border py-16 scroll-mt-16">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             {/* Brand */}
@@ -287,7 +289,7 @@ const Index = () => {
           {/* Newsletter */}
           <div className="border-t border-border pt-12">
             <div className="max-w-2xl mx-auto text-center space-y-4">
-              <h4 className="text-2xl font-bold">Stay Updated on <span className="text-primary">LumenPay AI</span></h4>
+              <h4 className="text-2xl font-bold">Stay Updated on <span className="text-primary">LumenPay</span></h4>
               <p className="text-muted-foreground">Get the latest updates, news, and insights delivered to your inbox.</p>
               <div className="flex gap-2 max-w-md mx-auto">
                 <Input 
@@ -302,7 +304,7 @@ const Index = () => {
 
           {/* Copyright */}
           <div className="mt-12 pt-8 border-t border-border text-center text-muted-foreground text-sm">
-            <p>&copy; 2025 LumenPay AI. All rights reserved. Built with AI, powered by Arc.</p>
+            <p>&copy; 2025 LumenPay. All rights reserved. Built with AI, powered by Arc.</p>
           </div>
         </div>
       </footer>
