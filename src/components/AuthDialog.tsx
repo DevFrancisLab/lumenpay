@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Dialog,
   DialogContent,
@@ -18,15 +19,19 @@ interface AuthDialogProps {
 }
 
 const AuthDialog = ({ trigger, onOpenChange, defaultOpen = false }: AuthDialogProps) => {
+  const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // Add your authentication logic here
+    
+    // Simulate authentication delay
     setTimeout(() => {
       setIsLoading(false);
+      // Navigate to dashboard after successful login
+      navigate("/dashboard");
     }, 1000);
   };
 

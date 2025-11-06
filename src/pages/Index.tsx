@@ -5,6 +5,7 @@ import { Brain, Shield, Coins, ArrowRightLeft, Twitter, Github, Linkedin, Mail }
 import heroImage from "@/assets/hero-ai-crypto.jpg";
 import Navbar from "@/components/Navbar";
 import AuthDialog from "@/components/AuthDialog";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   return (
