@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import AuthDialog from "./AuthDialog";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,8 +55,8 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost">Sign In</Button>
-            <Button variant="gold">Get Started</Button>
+            <AuthDialog trigger={<Button variant="ghost">Sign In</Button>} />
+            <AuthDialog trigger={<Button variant="gold">Get Started</Button>} />
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,12 +98,12 @@ const Navbar = () => {
                 About
               </button>
               <div className="pt-4 space-y-2">
-                <Button variant="ghost" className="w-full">
-                  Sign In
-                </Button>
-                <Button variant="gold" className="w-full">
-                  Get Started
-                </Button>
+                <AuthDialog
+                  trigger={<Button variant="ghost" className="w-full">Sign In</Button>}
+                />
+                <AuthDialog
+                  trigger={<Button variant="gold" className="w-full">Get Started</Button>}
+                />
               </div>
             </div>
           </div>

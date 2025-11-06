@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Brain, Shield, Coins, ArrowRightLeft, Twitter, Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-ai-crypto.jpg";
 import Navbar from "@/components/Navbar";
+import AuthDialog from "@/components/AuthDialog";
 
 const Index = () => {
   return (
@@ -40,10 +41,14 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Button variant="gold" size="xl" className="group">
-                Get Started
-                <ArrowRightLeft className="ml-2 group-hover:rotate-180 transition-transform duration-500" />
-              </Button>
+              <AuthDialog 
+                trigger={
+                  <Button variant="gold" size="xl" className="group">
+                    Get Started
+                    <ArrowRightLeft className="ml-2 group-hover:rotate-180 transition-transform duration-500" />
+                  </Button>
+                }
+              />
               <Button variant="gold-outline" size="xl">
                 Watch Demo
               </Button>
