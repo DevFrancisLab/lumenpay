@@ -55,11 +55,6 @@ const menuItems = [
     path: "/dashboard/integrations",
   },
   {
-    title: "Integrations",
-    icon: Plug,
-    path: "/dashboard/integrations",
-  },
-  {
     title: "Support",
     icon: HelpCircle,
     path: "/dashboard/support",
